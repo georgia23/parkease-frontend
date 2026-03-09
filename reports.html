@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ParkEase | Daily Revenue Reports</title>
+
+    <link rel="icon" href="assets/favicon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="reports-header">
+      <div class="reports-title">
+        <img src="assets/logo3 .png" class="logo-small" />
+
+        <div>
+          <h3 class="logo">ParkEase - Daily Reports</h3>
+        </div>
+      </div>
+
+      <div class="report-actions">
+        <button class="btn-outline" onclick="window.print()">
+          Download PDF
+        </button>
+
+        <button class="btn-primary" id="exportCSV">Export CSV</button>
+      </div>
+    </header>
+
+    <main class="reports-main">
+      <!-- REVENUE OVERVIEW -->
+
+      <section class="revenue-overview">
+        <div class="date-selector">
+          <button id="prevDay">◀</button>
+
+          <h4 id="reportDate"></h4>
+
+          <button id="nextDay">▶</button>
+        </div>
+        <br>
+
+        <div class="revenue-cards">
+          <article class="revenue-card">
+            <h4>Parking Revenue</h4>
+
+            <p class="revenue-amount" id="parkingRevenue">UGX 0</p>
+
+            <span class="change positive">+5%</span>
+          </article>
+
+          <article class="revenue-card">
+            <h4>Tyre Clinic</h4>
+
+            <p class="revenue-amount" id="tyreRevenue">UGX 0</p>
+
+            <span class="change negative">-2%</span>
+          </article>
+
+          <article class="revenue-card">
+            <h4>Battery Hire</h4>
+
+            <p class="revenue-amount" id="batteryRevenue">UGX 0</p>
+
+            <span class="change positive">+3%</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- SEARCH -->
+
+      <section class="table-controls">
+        <input
+          type="text"
+          id="searchTable"
+          placeholder="Search by Plate or Receipt"
+        />
+      </section>
+
+      <!-- VEHICLE TABLE -->
+
+      <section class="reports-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Receipt #</th>
+              <th>Plate #</th>
+              <th>In-Time</th>
+              <th>Out-Time</th>
+              <th>Duration</th>
+              <th>Fee</th>
+            </tr>
+          </thead>
+
+          <tbody id="reportTable"></tbody>
+        </table>
+      </section>
+
+      <!-- PAGINATION -->
+
+      <section class="pagination">
+        <button id="prevPage">Previous</button>
+
+        <button class="page active">1</button>
+        <button class="page">2</button>
+        <button class="page">3</button>
+
+        <button id="nextPage">Next</button>
+      </section>
+
+      <!-- GRAND TOTAL -->
+
+      <section class="grand-total">
+        <h2>
+          Daily Grand Total:
+          <span id="grandTotal">UGX 0</span>
+        </h2>
+      </section>
+    </main>
+
+    <footer class="reports-footer">
+      <p>ADMIN CONTROL PANEL</p>
+
+      <p>© 2026 ParkEase Parking Management System</p>
+    </footer>
+
+    <script src="js/reports.js"></script>
+  </body>
+</html>
