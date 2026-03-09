@@ -15,20 +15,21 @@ List each page and its purpose (one line each).
 
 1. Clone the repo: `https://github.com/georgia23/parkease-frontend.git`
 2. Open `index.html` in your browser (no server needed)
-3. Login with: username `admin` password `admin123`
+3. Login with: username `admin` password `admin123` for Administrator
+4. Login with: username `attendant` password `park2026` for Attendant
 
 ## Features Implemented
 - [x] Login page with role-based redirect
-- [x] Attendant Dashboard
-- [x] Vehicle Registration with form validation
-- [x] Sign-out page with fee calculation
-- [x] Admin Reports page with table filtering
+- [x] Attendant Dashboard with button redirects
+- [x] Vehicle Registration
+- [x] Sign-out page
+- [x] Admin Reports page 
 
 ## Validation Rules Applied
-List the validation rules you implemented.
+- Login: Input fields must not be empty
 
 ## Known Issues / Assumptions
-List anything that isn't working, or assumptions you made.
+- I only applied js validation for authentication [I am aking the Python track]
 
 ## Author
 Georgia Tusiime Bagambisa — Refactory CSE 2026
