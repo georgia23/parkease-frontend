@@ -1,90 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <title>ParkEase | Login</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
 
-<title>ParkEase | Login</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/favicon.png">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Main CSS -->
-<link rel="stylesheet" href="css/style.css">
-
-</head>
-
-
-<body class="login-body">
-
-<header class="login-header">
-    <div class="logo-area">
-        <img src="assets/logo.png" alt="ParkEase Logo">
+  <body class="login-body">
+    <header class="login-header">
+      <div class="logo-area">
+        <img src="assets/logo.png" alt="ParkEase Logo" />
         <!-- <h1>ParkEase</h1> -->
-    </div>
-</header>
+      </div>
+    </header>
 
+    <main class="login-main">
+      <section class="login-section">
+        <article class="login-card">
+          <h2>System Login</h2>
+          <p class="login-subtitle">
+            Access the ParkEase Parking Management System
+          </p>
 
-<main class="login-main">
+          <form id="loginForm" class="login-form">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                required
+              />
+            </div>
 
-<section class="login-section">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+            </div>
 
-<article class="login-card">
+            <button type="submit" class="btn-primary">Login</button>
 
-<h2>System Login</h2>
-<p class="login-subtitle">Access the ParkEase Parking Management System</p>
+            <p id="error-message" class="error-message"></p>
+          </form>
+        </article>
+      </section>
+    </main>
 
-<form id="loginForm" class="login-form">
-
-<div class="form-group">
-<label for="username">Username</label>
-<input
-type="text"
-id="username"
-name="username"
-placeholder="Enter username"
-required>
-</div>
-
-
-<div class="form-group">
-<label for="password">Password</label>
-<input
-type="password"
-id="password"
-name="password"
-placeholder="Enter password"
-required>
-</div>
-
-
-<button type="submit" class="btn-primary">
-Login
-</button>
-
-<p id="error-message" class="error-message"></p>
-
-</form>
-
-</article>
-
-</section>
-
-</main>
-
-
-<footer class="login-footer">
-<p>© 2026 ParkEase Parking System</p>
-</footer>
-
-
-
-
-</body>
-
+    <footer class="login-footer">
+      <p>© 2026 ParkEase Parking System</p>
+    </footer>
+  </body>
 </html>

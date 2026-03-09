@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ParkEase | Attendant Dashboard</title>
+
+    <link rel="icon" href="assets/favicon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="dashboard-body">
+    <div class="dashboard-layout">
+      <!-- SIDEBAR -->
+
+      <nav class="sidebar">
+        <div class="sidebar-top">
+          <div class="logo-area">
+            <img src="assets/logo.png" alt="ParkEase" />
+          </div>
+
+          <ul class="nav-links">
+            <li class="active">
+              <a href="dashboard.html">Dashboard</a>
+            </li>
+
+            <li>
+              <a href="reports.html">Reports</a>
+            </li>
+
+            <li>
+              <a href="#">Settings</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-user">
+          <p class="user-role">Logged in as &nbsp;</p>
+          <p class="user-name">Attendant</p>
+        </div>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+
+      <main class="main-content">
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+          <h2>ParkEase - Dashboard</h2>
+
+          <div class="topbar-right">
+            <input
+              type="text"
+              placeholder="Search vehicle or plate..."
+              class="search-bar"
+            />
+            <p class="shift-time">Shift: 08:00 – 18:00</p>
+
+            <div class="notification-bell">🔔</div>
+          </div>
+        </header>
+
+        <!-- DASHBOARD CONTENT -->
+
+        <section class="dashboard-content">
+          <!-- STATS CARDS -->
+
+          <section class="stats-grid">
+            <article class="stat-card">
+              <h4>Total Vehicles Parked</h4>
+              <p class="stat-number">42</p>
+            </article>
+
+            <article class="stat-card">
+              <h4>Today's Revenue</h4>
+              <p class="stat-number">UGX 450,000</p>
+            </article>
+
+            <article class="stat-card">
+              <h4>Available Parking Slots</h4>
+
+              <div class="progress-container">
+                <div class="progress-bar" id="slotProgress"></div>
+              </div>
+
+              <p class="occupancy-text">58% Occupied</p>
+            </article>
+          </section>
+
+          <!-- QUICK ACTIONS -->
+
+          <section class="quick-actions">
+            <h3>Quick Actions</h3>
+
+            <div class="action-buttons">
+              <a href="register.html" class="btn-primary"> Register Arrival </a>
+
+              <a href="signout.html" class="btn-secondary">
+                Vehicle Sign-out
+              </a>
+
+              <button class="btn-outline" id="printSummary">
+                Print Daily Summary
+              </button>
+            </div>
+          </section>
+
+          <!-- RECENT ARRIVALS -->
+
+          <section class="recent-arrivals">
+            <h3>Recent Arrivals</h3>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Plate Number</th>
+                  <th>Vehicle Type</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody id="arrivalTable">
+                <tr>
+                  <td>09:10</td>
+                  <td>UBF 234K</td>
+                  <td>Saloon</td>
+
+                  <td>
+                    <span class="badge parked"> Parked </span>
+                  </td>
+
+                  <td>
+                    <button class="action-menu">⋮</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>08:45</td>
+                  <td>UAT 778D</td>
+                  <td>SUV</td>
+
+                  <td>
+                    <span class="badge signedout"> Signed Out </span>
+                  </td>
+
+                  <td>
+                    <button class="action-menu">⋮</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
