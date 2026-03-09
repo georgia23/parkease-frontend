@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ParkEase | Vehicle Sign-out</title>
+
+    <link rel="icon" href="assets/favicon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="top-nav">
+      <nav class="nav-container">
+        <h3 class="logo">ParkEase - Sign-out & Receipting</h3>
+
+        <ul class="nav-menu">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li class="active"><a href="signout.html">Sign-out</a></li>
+        </ul>
+
+        <div class="profile-area">Attendant</div>
+      </nav>
+    </header>
+
+    <main class="signout-main">
+      <!-- SEARCH BAR -->
+
+      <section class="search-section">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search Receipt by ID or Plate Number"
+        />
+
+        <button id="searchBtn" class="btn-primary">Search</button>
+      </section>
+
+      <section class="signout-layout">
+        <!-- LEFT PANEL -->
+
+        <section class="vehicle-panel">
+          <article class="vehicle-card">
+            <div class="vehicle-title">
+              <h3>Vehicle & Arrival Details</h3>
+
+              <span class="badge pending"><strong>PENDING SIGN-OUT</strong></span>
+            </div>
+            <div class="vehicle-info">
+              <p>Driver: <span id="driverName">--</span></p>
+
+              <p>
+                Vehicle Type: <span id="vehicleType">--</span>
+              </p>
+
+              <p>
+               Arrival Time: <span id="arrivalTime">--</span>
+              </p>
+
+              <p>Duration:<span id="duration">--</span></p>
+            </div>
+
+            <div class="fee-box">
+              <p>Parking Fee</p>
+
+              <h2 id="parkingFee">UGX 0</h2>
+            </div>
+          </article>
+
+          <!-- RECEIVER FORM -->
+
+          <article class="receiver-card">
+            <h3>Receiver Information</h3>
+            <br>
+            <form id="receiverForm">
+              <div class="form-group">
+                <label>Receiver Full Name</label>
+
+                <input type="text" id="receiverName" />
+
+                <p class="error" id="receiverNameError"></p>
+              </div>
+
+              <div class="form-group">
+                <label>Phone Number</label>
+
+                <input type="text" id="receiverPhone" />
+
+                <p class="error" id="receiverPhoneError"></p>
+              </div>
+
+              <div class="form-group">
+                <label>NIN Number</label>
+
+                <input type="text" id="receiverNIN" />
+
+                <p class="error" id="receiverNINError"></p>
+              </div>
+
+              <div class="form-group">
+                <label>Gender</label>
+
+                <select id="receiverGender">
+                  <option value="">Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+
+              <div class="form-buttons">
+                <button type="submit" class="btn-primary">
+                  Confirm Payment & Sign-out
+                </button>
+
+                <button type="button" class="btn-secondary" id="cancelBtn">
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </article>
+        </section>
+
+        <!-- RIGHT PANEL -->
+
+        <section class="receipt-panel">
+          <article class="receipt-card" id="receiptPreview">
+            <h3>Receipt Preview</h3>
+            <br>
+            <div class="receipt-body">
+              <p>Receipt No: <span id="rReceipt">--</span></p>
+              <p>Date: <span id="rDate">--</span></p>
+              <p>Plate No: <span id="rPlate">--</span></p>
+              <p>Category: <span id="rType">--</span></p>
+              <p>Check-in: <span id="rArrival">--</span></p>
+              <p>Duration: <span id="rDuration">--</span></p>
+              <br>
+              <p>Total: <span id="rTotal">UGX 0</span></p>
+
+              
+              <hr />
+
+              <br>
+
+              <p><strong>Receiver:</strong> <span id="rReceiver">--</span></p>
+              <p><strong>NIN:</strong> <span id="rNIN">--</span></p>
+            </div>
+
+            <div class="qr-box">SCAN TO VERIFY</div>
+
+            <button class="btn-outline" onclick="window.print()">
+              Print Receipt
+            </button>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
