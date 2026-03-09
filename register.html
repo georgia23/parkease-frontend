@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ParkEase | Vehicle Registration</title>
+
+    <link rel="icon" href="assets/favicon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="top-nav">
+      <nav class="nav-container">
+        <div class="logo-registration">
+          <img src="assets/logo.png" alt="ParkEase" />
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li class="active"><a href="register.html">Registration</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+
+        <div class="profile-area">Attendant</div>
+      </nav>
+    </header>
+
+    <main class="register-main">
+      <section class="form-section">
+        <h2>Vehicle Registration</h2>
+        <br /><br />
+        <form id="vehicleForm" class="vehicle-form">
+          <!-- DRIVER INFO -->
+
+          <fieldset>
+            <legend>Driver Information</legend>
+
+            <div class="form-group">
+              <label>Driver Name</label>
+
+              <input
+                type="text"
+                id="driverName"
+                placeholder="Enter driver's full name"
+              />
+
+              <small class="hint">Must begin with a capital letter</small>
+
+              <p class="error" id="driverNameError"></p>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+
+              <input
+                type="text"
+                id="phoneNumber"
+                placeholder="+256XXXXXXXXX or 07XXXXXXXX"
+              />
+
+              <p class="error" id="phoneError"></p>
+            </div>
+          </fieldset>
+
+          <!-- VEHICLE INFO -->
+
+          <fieldset>
+            <legend>Vehicle Information</legend>
+
+            <div class="form-group">
+              <label>Vehicle Type</label>
+
+              <select id="vehicleType">
+                <option value="">Select type</option>
+                <option>Truck</option>
+                <option>Personal Car</option>
+                <option>Taxi</option>
+                <option>Coaster</option>
+                <option>Boda-boda</option>
+              </select>
+
+              <p class="error" id="vehicleTypeError"></p>
+            </div>
+
+            <div class="form-group">
+              <label>Number Plate</label>
+
+              <input type="text" id="numberPlate" placeholder="UBA 123X" />
+
+              <p class="error" id="plateError"></p>
+            </div>
+
+            <div class="form-group">
+              <label>Vehicle Model & Color</label>
+
+              <input
+                type="text"
+                id="vehicleModel"
+                placeholder="e.g. Toyota Premio - Silver"
+              />
+
+              <p class="error" id="modelError"></p>
+            </div>
+
+            <div class="form-group nin-field" id="ninContainer">
+              <label>NIN Number</label>
+
+              <input type="text" id="ninNumber" placeholder="CMXXXXXXX" />
+
+              <p class="error" id="ninError"></p>
+            </div>
+          </fieldset>
+
+          <div class="reg-form-buttons">
+            <button type="submit" class="btn-primary">
+              Register & Print Receipt
+            </button>
+
+            <button type="reset" class="btn-secondary">Clear Form</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- QUICK TIPS -->
+
+    <aside class="quick-tips">
+      <h4>Quick Tips</h4>
+
+      <ul>
+        <li>Press Enter to submit form</li>
+        <li>Use TAB to move fields</li>
+        <li>Double check plate numbers</li>
+      </ul>
+    </aside>
+
+    <footer class="system-footer">
+      <p>System Version 1.0</p>
+
+      <p id="sessionTime"></p>
+    </footer>
+
+    <script src="js/validation.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>
